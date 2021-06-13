@@ -1,5 +1,7 @@
 FROM summerwind/actions-runner:latest
 
+LABEL maintainer="vidurbutalia@gmail.com"
+
 RUN sudo apt update -y \
   && sudo apt install curl wget \
   && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add - \
