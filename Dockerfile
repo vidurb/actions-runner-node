@@ -3,7 +3,7 @@ FROM summerwind/actions-runner:latest
 LABEL maintainer="vidurbutalia@gmail.com"
 
 RUN sudo apt update -y \
-  && sudo apt install -y curl wget apt-transport-https ca-certificates \
+  && sudo apt install -y curl wget apt-transport-https ca-certificates jq \
   && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add - \
   && echo "deb https://deb.nodesource.com/node_14.x focal main" | sudo tee /etc/apt/sources.list.d/nodesource.list \
   && echo "deb-src https://deb.nodesource.com/node_14.x focal main" | sudo tee -a /etc/apt/sources.list.d/nodesource.list \
